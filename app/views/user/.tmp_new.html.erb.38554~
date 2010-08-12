@@ -1,0 +1,19 @@
+<%= error_messages_for 'user' %>
+
+<% form_for :user, :url => { :action => :new } do |form| %>
+	
+	<p>Username: <%= form.text_field :username, :size => 30 %></p>
+	
+	<p>Firstname: <%= form.text_field :firstname, :size => 30 %></p>
+	
+	<p>Lastname: <%= form.text_field :lastname, :size => 30 %></p>
+	
+	<p>Password: <%= form.password_field :password, :size => 30 %></p>
+	
+	<p>Confirm: <%= form.password_field :password_confirmation, :size => 30 %></p>
+	
+	<p>Email: <%= form.text_field :email, :size => 50 %></p>
+
+	<%= submit_tag 'Signup' %>
+
+<% end %>
